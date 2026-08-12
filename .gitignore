@@ -5,3 +5,4 @@ build/
 data/persistence/
 .vscode/
 .DS_Store
+src/main/java/it/bookverse/console/ConsoleApp.java
