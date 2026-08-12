@@ -382,7 +382,7 @@ public class ApplicationContext {
         userRepository.save(
                 createDemoWriter(
                         "writer-9",
-                        "ّFyodor Dostoevsky"
+                        "Fyodor Dostoevsky"
                 )
         );
     }
@@ -504,7 +504,7 @@ public class ApplicationContext {
                                 "16.00"
                         ),
                         Audience.EVERYONE,
-                        Category.Adventure,
+                        Category.ADVENTURE,
                         "data/books/sherlock-holmes.pdf",
                         "/it/bookverse/images/covers/sherlock-holmes.jpg"
                 )
@@ -521,7 +521,7 @@ public class ApplicationContext {
                         ),
                         Audience.EVERYONE,
                         Category.ROMANCE,
-                        "data/books/harry-potter.pdf",
+                        "data/books/jane-eyre.pdf",
                         "/it/bookverse/images/covers/jane-eyre.jpg"
                 )
         );
@@ -536,8 +536,8 @@ public class ApplicationContext {
                                 "24.00"
                         ),
                         Audience.EVERYONE,
-                        Category.Adventure,
-                        "data/books/harry-potter.pdf",
+                        Category.ADVENTURE,
+                        "data/books/war-and-peace.pdf",
                         "/it/bookverse/images/covers/war-and-peace.jpg"
                 )
         );
@@ -553,7 +553,7 @@ public class ApplicationContext {
                         ),
                         Audience.EVERYONE,
                         Category.FICTION,
-                        "data/books/harry-potter.pdf",
+                        "data/books/white-nights.pdf",
                         "/it/bookverse/images/covers/white-nights.jpg"
                 )
         );

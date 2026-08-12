@@ -8,7 +8,7 @@ public enum Category {
     SCIENCE_FICTION,
     HISTORY,
     BIOGRAPHY,
-    Adventure,
+    ADVENTURE,
     CHILDREN,
     OTHER
 }

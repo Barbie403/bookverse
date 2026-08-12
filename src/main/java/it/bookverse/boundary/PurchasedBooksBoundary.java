@@ -30,6 +30,12 @@ public class PurchasedBooksBoundary {
     private static final DateTimeFormatter DATE_FORMATTER =
             DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
+    private static final String SUCCESS_CLASS =
+            "purchased-message-success";
+
+    private static final String ERROR_CLASS =
+            "purchased-message-error";
+
     private final ViewPurchasedBooksController
             viewPurchasedBooksController;
 
@@ -143,18 +149,28 @@ public class PurchasedBooksBoundary {
                 );
 
         titleLabel.setWrapText(true);
-        titleLabel.getStyleClass()
-                .add("purchased-card-title");
+
+        titleLabel
+                .getStyleClass()
+                .add(
+                        "purchased-card-title"
+                );
 
         Label categoryLabel =
                 new Label(
                         book.getCategory()
                                 .name()
-                                .replace("_", " ")
+                                .replace(
+                                        "_",
+                                        " "
+                                )
                 );
 
-        categoryLabel.getStyleClass()
-                .add("purchased-category-badge");
+        categoryLabel
+                .getStyleClass()
+                .add(
+                        "purchased-category-badge"
+                );
 
         Label priceLabel =
                 new Label(
@@ -163,8 +179,11 @@ public class PurchasedBooksBoundary {
                                 .getPricePaid()
                 );
 
-        priceLabel.getStyleClass()
-                .add("purchased-card-price");
+        priceLabel
+                .getStyleClass()
+                .add(
+                        "purchased-card-price"
+                );
 
         Label dateLabel =
                 new Label(
@@ -176,15 +195,19 @@ public class PurchasedBooksBoundary {
                                 )
                 );
 
-        dateLabel.getStyleClass()
-                .add("purchased-card-date");
+        dateLabel
+                .getStyleClass()
+                .add(
+                        "purchased-card-date"
+                );
 
         Button detailsButton =
                 new Button(
                         "View Details"
                 );
 
-        detailsButton.getStyleClass()
+        detailsButton
+                .getStyleClass()
                 .add(
                         "purchased-secondary-button"
                 );
@@ -206,7 +229,8 @@ public class PurchasedBooksBoundary {
                         "Download PDF"
                 );
 
-        downloadButton.getStyleClass()
+        downloadButton
+                .getStyleClass()
                 .add(
                         "purchased-download-button"
                 );
@@ -217,7 +241,9 @@ public class PurchasedBooksBoundary {
 
         downloadButton.setOnAction(
                 event ->
-                        handleDownload(book)
+                        handleDownload(
+                                book
+                        )
         );
 
         VBox card =
@@ -232,10 +258,15 @@ public class PurchasedBooksBoundary {
                         downloadButton
                 );
 
-        card.setPrefWidth(230);
+        card.setPrefWidth(
+                230
+        );
 
-        card.getStyleClass()
-                .add("purchased-book-card");
+        card
+                .getStyleClass()
+                .add(
+                        "purchased-book-card"
+                );
 
         return card;
     }
@@ -246,9 +277,17 @@ public class PurchasedBooksBoundary {
         ImageView imageView =
                 new ImageView();
 
-        imageView.setFitWidth(150);
-        imageView.setFitHeight(210);
-        imageView.setPreserveRatio(true);
+        imageView.setFitWidth(
+                150
+        );
+
+        imageView.setFitHeight(
+                210
+        );
+
+        imageView.setPreserveRatio(
+                true
+        );
 
         String coverPath =
                 book.getCoverPath();
@@ -261,9 +300,13 @@ public class PurchasedBooksBoundary {
 
         try {
             Path path =
-                    Path.of(coverPath);
+                    Path.of(
+                            coverPath
+                    );
 
-            if (Files.exists(path)) {
+            if (Files.exists(
+                    path
+            )) {
                 imageView.setImage(
                         new Image(
                                 path.toUri()
@@ -294,8 +337,8 @@ public class PurchasedBooksBoundary {
             }
 
         } catch (RuntimeException ignored) {
-            // Missing cover does not prevent the
-            // purchased book from being displayed.
+            // Missing cover does not prevent
+            // the purchased book from being displayed.
         }
 
         return imageView;
@@ -381,7 +424,8 @@ public class PurchasedBooksBoundary {
             safeTitle = "book";
         }
 
-        return safeTitle + ".pdf";
+        return safeTitle
+                + ".pdf";
     }
 
     private void updateWalletBalance() {
@@ -429,23 +473,25 @@ public class PurchasedBooksBoundary {
         messageLabel
                 .getStyleClass()
                 .remove(
-                        "purchased-message-error"
+                        ERROR_CLASS
                 );
 
         if (!messageLabel
                 .getStyleClass()
                 .contains(
-                        "purchased-message-success"
+                        SUCCESS_CLASS
                 )) {
 
             messageLabel
                     .getStyleClass()
                     .add(
-                            "purchased-message-success"
+                            SUCCESS_CLASS
                     );
         }
 
-        messageLabel.setText(message);
+        messageLabel.setText(
+                message
+        );
     }
 
     private void showError(
@@ -454,22 +500,24 @@ public class PurchasedBooksBoundary {
         messageLabel
                 .getStyleClass()
                 .remove(
-                        "purchased-message-success"
+                        SUCCESS_CLASS
                 );
 
         if (!messageLabel
                 .getStyleClass()
                 .contains(
-                        "purchased-message-error"
+                        ERROR_CLASS
                 )) {
 
             messageLabel
                     .getStyleClass()
                     .add(
-                            "purchased-message-error"
+                            ERROR_CLASS
                     );
         }
 
-        messageLabel.setText(message);
+        messageLabel.setText(
+                message
+        );
     }
 }
