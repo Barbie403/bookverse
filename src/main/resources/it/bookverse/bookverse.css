@@ -1,0 +1,2062 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 15px;
+    -fx-background-color: #0f1017;
+}
+
+.auth-root {
+    -fx-background-color: #0f1017;
+}
+
+.auth-image-pane {
+    -fx-background-color: #090a0f;
+}
+
+.auth-form-pane {
+    -fx-background-color: #101117;
+}
+
+.auth-scroll-pane {
+    -fx-background-color: #101117;
+    -fx-border-color: transparent;
+}
+
+.auth-scroll-pane > .viewport {
+    -fx-background-color: #101117;
+}
+
+.auth-scroll-pane .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.auth-scroll-pane .scroll-bar .thumb {
+    -fx-background-color: #4d3b70;
+    -fx-background-radius: 8px;
+}
+
+.auth-scroll-pane .scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.brand-title {
+    -fx-text-fill: #f0d273;
+    -fx-font-size: 35px;
+    -fx-font-weight: 800;
+}
+
+.page-title {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 31px;
+    -fx-font-weight: 800;
+}
+
+.page-subtitle {
+    -fx-text-fill: #c4c1cd;
+    -fx-font-size: 16px;
+    -fx-font-weight: 500;
+}
+
+.field-label {
+    -fx-text-fill: #f3f1f8;
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+}
+
+.auth-field {
+    -fx-background-color: #1a1921;
+    -fx-background-radius: 7px;
+
+    -fx-border-color: #554074;
+    -fx-border-radius: 7px;
+    -fx-border-width: 1.2px;
+
+    -fx-text-fill: #faf9ff;
+    -fx-prompt-text-fill: #aaa6b7;
+
+    -fx-font-size: 16px;
+    -fx-font-weight: 500;
+
+    -fx-padding: 14px 16px;
+}
+
+.auth-field:focused {
+    -fx-border-color: #8568be;
+    -fx-border-width: 1.7px;
+
+    -fx-effect:
+            dropshadow(
+                    gaussian,
+                    rgba(113, 84, 165, 0.20),
+                    8,
+                    0.15,
+                    0,
+                    0
+            );
+}
+
+.auth-text-area {
+    -fx-background-color: #1a1921;
+    -fx-background-radius: 7px;
+
+    -fx-border-color: #554074;
+    -fx-border-radius: 7px;
+    -fx-border-width: 1.2px;
+
+    -fx-text-fill: #faf9ff;
+    -fx-prompt-text-fill: #aaa6b7;
+
+    -fx-font-size: 16px;
+    -fx-font-weight: 500;
+}
+
+.auth-text-area:focused {
+    -fx-border-color: #8568be;
+    -fx-border-width: 1.7px;
+}
+
+.auth-text-area .content {
+    -fx-background-color: #1a1921;
+    -fx-background-radius: 7px;
+    -fx-padding: 9px;
+}
+
+.primary-button {
+    -fx-background-color: #66519a;
+    -fx-background-radius: 7px;
+
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 17px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 14px 22px;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #765ead;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #594486;
+}
+
+.auth-link {
+    -fx-text-fill: #9674ce;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+
+    -fx-border-color: transparent;
+    -fx-underline: false;
+}
+
+.auth-link:hover {
+    -fx-text-fill: #b497e1;
+    -fx-underline: true;
+}
+
+.secondary-text {
+    -fx-text-fill: #cbc8d3;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+}
+
+.error-label {
+    -fx-text-fill: #ff8585;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+}
+
+.persistence-title {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 21px;
+    -fx-font-weight: 800;
+}
+
+.persistence-card {
+    -fx-background-color: #1a1921;
+    -fx-background-radius: 7px;
+
+    -fx-border-color: #302d38;
+    -fx-border-radius: 7px;
+    -fx-border-width: 1.2px;
+
+    -fx-padding: 16px;
+    -fx-cursor: hand;
+}
+
+.persistence-card-selected {
+    -fx-background-color: #211d2a;
+    -fx-border-color: #8a69c1;
+    -fx-border-width: 1.6px;
+
+    -fx-effect:
+            dropshadow(
+                    gaussian,
+                    rgba(112, 78, 170, 0.22),
+                    10,
+                    0.14,
+                    0,
+                    1
+            );
+}
+
+.persistence-card-title {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 17px;
+    -fx-font-weight: 800;
+}
+
+.persistence-card-description {
+    -fx-text-fill: #b5b1bf;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+}
+
+.radio-button {
+    -fx-text-fill: #faf9ff;
+}
+
+.radio-button .radio {
+    -fx-background-color: #2a2731;
+
+    -fx-border-color: #7f69a8;
+    -fx-border-radius: 50%;
+
+    -fx-background-radius: 50%;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: #a482e5;
+}
+
+.role-toggle-container {
+    -fx-background-color: #19181f;
+    -fx-background-radius: 7px;
+
+    -fx-border-color: #5c457f;
+    -fx-border-radius: 7px;
+    -fx-border-width: 1.2px;
+
+    -fx-padding: 0;
+}
+
+.role-toggle-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 6px;
+
+    -fx-border-color: transparent;
+
+    -fx-text-fill: #f2eff8;
+    -fx-font-size: 17px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 14px 28px;
+    -fx-cursor: hand;
+}
+
+.role-toggle-button:selected {
+    -fx-background-color: #66519a;
+    -fx-text-fill: white;
+}
+
+.role-toggle-button:hover {
+    -fx-background-color: rgba(102, 81, 154, 0.35);
+}
+
+.role-toggle-button:selected:hover {
+    -fx-background-color: #725aa7;
+}
+
+.auth-date-picker {
+    -fx-background-color: #1a1921;
+    -fx-background-radius: 7px;
+
+    -fx-border-color: #554074;
+    -fx-border-radius: 7px;
+    -fx-border-width: 1.2px;
+
+    -fx-font-size: 16px;
+}
+
+.auth-date-picker:focused {
+    -fx-border-color: #8568be;
+    -fx-border-width: 1.7px;
+}
+
+.auth-date-picker .text-field {
+    -fx-background-color: #1a1921;
+    -fx-background-radius: 7px 0 0 7px;
+
+    -fx-text-fill: #faf9ff;
+    -fx-prompt-text-fill: #aaa6b7;
+
+    -fx-font-size: 16px;
+    -fx-font-weight: 500;
+
+    -fx-padding: 12px 14px;
+}
+
+.auth-date-picker .arrow-button {
+    -fx-background-color: #2b2733;
+    -fx-background-radius: 0 7px 7px 0;
+}
+
+.auth-date-picker .arrow-button:hover {
+    -fx-background-color: #3a3048;
+}
+
+.auth-date-picker .arrow {
+    -fx-background-color: #ddd8e8;
+}
+
+.separator .line {
+    -fx-border-color: #484550;
+    -fx-border-width: 1px 0 0 0;
+}
+
+/* =========================================================
+   LIBRARY PAGE
+   ========================================================= */
+
+.library-root {
+    -fx-background-color: #0f1017;
+}
+
+.sidebar {
+    -fx-background-color: #0d0e14;
+    -fx-border-color: #35323d;
+    -fx-border-width: 0 1px 0 0;
+}
+
+.sidebar-brand {
+    -fx-text-fill: #efd274;
+    -fx-font-size: 27px;
+    -fx-font-weight: 800;
+    -fx-padding: 10px 12px;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 7px;
+    -fx-border-color: transparent;
+
+    -fx-text-fill: #f0edf5;
+    -fx-font-size: 17px;
+    -fx-font-weight: 600;
+
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 14px 18px;
+    -fx-cursor: hand;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #272231;
+}
+
+.sidebar-button-active {
+    -fx-background-color: #594685;
+    -fx-text-fill: white;
+    -fx-font-weight: 800;
+}
+
+.sidebar-button-active:hover {
+    -fx-background-color: #66509a;
+}
+
+.sidebar-wallet-card {
+    -fx-background-color: #211e22;
+    -fx-background-radius: 10px;
+
+    -fx-border-color: #9b7d38;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+
+    -fx-padding: 18px;
+}
+
+.sidebar-wallet-title {
+    -fx-text-fill: #e1c56e;
+    -fx-font-size: 17px;
+    -fx-font-weight: 800;
+}
+
+.sidebar-wallet-balance {
+    -fx-text-fill: #f0cf69;
+    -fx-font-size: 24px;
+    -fx-font-weight: 800;
+}
+
+.library-content {
+    -fx-background-color: #101117;
+}
+
+.library-search-box {
+    -fx-background-color: #19181f;
+    -fx-background-radius: 7px;
+
+    -fx-border-color: #5b447e;
+    -fx-border-radius: 7px;
+    -fx-border-width: 1.2px;
+
+    -fx-padding: 2px 10px;
+}
+
+.library-search-box:focused-within {
+    -fx-border-color: #8768bd;
+}
+
+.library-search-icon {
+    -fx-text-fill: #eeeaf5;
+    -fx-font-size: 25px;
+    -fx-font-weight: 700;
+}
+
+.library-search-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-text-fill: #faf9ff;
+    -fx-prompt-text-fill: #aaa6b7;
+
+    -fx-font-size: 16px;
+    -fx-font-weight: 500;
+
+    -fx-padding: 13px 10px;
+}
+
+.library-search-field:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.library-clear-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #aaa6b7;
+
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+
+    -fx-cursor: hand;
+}
+
+.library-clear-button:hover {
+    -fx-text-fill: white;
+}
+
+.library-account-name {
+    -fx-text-fill: #f7f5fb;
+    -fx-font-size: 15px;
+    -fx-font-weight: 800;
+}
+
+.library-account-role {
+    -fx-text-fill: #9c83c8;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+}
+
+.library-page-title {
+    -fx-text-fill: #e3c66f;
+    -fx-font-size: 32px;
+    -fx-font-weight: 800;
+}
+
+.library-page-subtitle {
+    -fx-text-fill: #f3f1f7;
+    -fx-font-size: 19px;
+    -fx-font-weight: 500;
+}
+
+.category-filter {
+    -fx-background-color: #19181f;
+    -fx-background-radius: 18px;
+
+    -fx-border-color: #5a447c;
+    -fx-border-radius: 18px;
+    -fx-border-width: 1px;
+
+    -fx-text-fill: #e9e6ef;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+
+    -fx-padding: 9px 18px;
+    -fx-cursor: hand;
+}
+
+.category-filter:hover {
+    -fx-background-color: #292330;
+}
+
+.category-filter-active {
+    -fx-background-color: #332d3b;
+    -fx-text-fill: white;
+}
+
+.library-message {
+    -fx-text-fill: #c9c4d2;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+}
+
+.library-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.library-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.library-scroll-pane .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.library-scroll-pane .scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.library-scroll-pane .scroll-bar .thumb {
+    -fx-background-color: #4d3c68;
+    -fx-background-radius: 8px;
+}
+
+.book-card {
+    -fx-background-color: #19181f;
+    -fx-background-radius: 8px;
+
+    -fx-border-color: #554071;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+
+    -fx-padding: 14px;
+    -fx-cursor: hand;
+}
+
+.book-card:hover {
+    -fx-background-color: #211e29;
+    -fx-border-color: #8265b1;
+
+    -fx-effect:
+            dropshadow(
+                    gaussian,
+                    rgba(92, 64, 137, 0.28),
+                    12,
+                    0.15,
+                    0,
+                    2
+            );
+}
+
+.book-cover-container {
+    -fx-background-color:
+            linear-gradient(
+                    to bottom right,
+                    #322550,
+                    #15131d
+            );
+
+    -fx-background-radius: 5px;
+    -fx-border-color: #38323f;
+    -fx-border-radius: 5px;
+    -fx-alignment: CENTER;
+}
+
+.book-cover-placeholder {
+    -fx-text-fill: #e7cd78;
+    -fx-font-size: 17px;
+    -fx-font-weight: 800;
+    -fx-text-alignment: CENTER;
+    -fx-alignment: CENTER;
+}
+
+.book-card-title {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 15px;
+    -fx-font-weight: 800;
+}
+
+.book-card-audience {
+    -fx-text-fill: #c6c1cd;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+}
+
+.book-category-chip {
+    -fx-background-color: #31264a;
+    -fx-background-radius: 10px;
+
+    -fx-text-fill: #b89ce8;
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+
+    -fx-padding: 4px 8px;
+}
+
+.book-card-price {
+    -fx-text-fill: #e4c35e;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+}
+
+/* =========================================================
+   BOOK DETAILS PAGE
+   ========================================================= */
+
+.book-details-root {
+    -fx-background-color: #101117;
+}
+
+.book-details-header {
+    -fx-background-color: #0f1017;
+    -fx-border-color: #393640;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.book-details-back-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-text-fill: #f8f7fb;
+    -fx-font-size: 34px;
+    -fx-font-weight: 700;
+
+    -fx-padding: 2px 12px;
+    -fx-cursor: hand;
+}
+
+.book-details-back-button:hover {
+    -fx-text-fill: #a887df;
+}
+
+.book-details-header-title {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 30px;
+    -fx-font-weight: 800;
+}
+
+.book-details-favorite-placeholder {
+    -fx-text-fill: #aaa7b1;
+    -fx-font-size: 38px;
+    -fx-font-weight: 400;
+}
+
+.book-details-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.book-details-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.book-details-scroll-pane .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.book-details-scroll-pane .scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.book-details-scroll-pane .scroll-bar .thumb {
+    -fx-background-color: #4e3b69;
+    -fx-background-radius: 8px;
+}
+
+.book-details-content {
+    -fx-background-color: #101117;
+}
+
+.details-cover-container {
+    -fx-background-color:
+            linear-gradient(
+                    to bottom right,
+                    #342651,
+                    #17131f
+            );
+
+    -fx-background-radius: 8px;
+
+    -fx-border-color: #51426c;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1.2px;
+
+    -fx-alignment: CENTER;
+
+    -fx-effect:
+            dropshadow(
+                    gaussian,
+                    rgba(0, 0, 0, 0.42),
+                    18,
+                    0.18,
+                    0,
+                    5
+            );
+}
+
+.details-cover-placeholder {
+    -fx-text-fill: #f0d16d;
+    -fx-font-size: 29px;
+    -fx-font-weight: 800;
+
+    -fx-text-alignment: CENTER;
+    -fx-alignment: CENTER;
+}
+
+.details-book-title {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 42px;
+    -fx-font-weight: 800;
+}
+
+.details-writer-name {
+    -fx-text-fill: #c7c3cf;
+    -fx-font-size: 18px;
+    -fx-font-weight: 600;
+}
+
+.details-category-badge {
+    -fx-background-color: #30234a;
+    -fx-background-radius: 8px;
+
+    -fx-text-fill: #b998e7;
+    -fx-font-size: 15px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 9px 18px;
+}
+
+.details-audience-badge {
+    -fx-background-color: #1f2a20;
+    -fx-background-radius: 8px;
+
+    -fx-text-fill: #79ad7e;
+    -fx-font-size: 15px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 9px 18px;
+}
+
+.details-availability-badge {
+    -fx-background-radius: 8px;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 9px 18px;
+}
+
+.details-availability-available {
+    -fx-background-color: #1c3328;
+    -fx-text-fill: #78c596;
+}
+
+.details-availability-removed {
+    -fx-background-color: #3a2024;
+    -fx-text-fill: #e8848c;
+}
+
+.details-price-card {
+    -fx-background-color: #211e22;
+    -fx-background-radius: 12px;
+
+    -fx-border-color: #aa8a3d;
+    -fx-border-radius: 12px;
+    -fx-border-width: 1.2px;
+
+    -fx-padding: 18px 22px;
+}
+
+.details-price-caption {
+    -fx-text-fill: #dbc477;
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+}
+
+.details-price-value {
+    -fx-text-fill: #f0cf68;
+    -fx-font-size: 27px;
+    -fx-font-weight: 800;
+}
+
+.details-section-title {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 27px;
+    -fx-font-weight: 800;
+}
+
+.details-description {
+    -fx-text-fill: #c4c1ca;
+    -fx-font-size: 17px;
+    -fx-font-weight: 500;
+
+    -fx-line-spacing: 3px;
+}
+
+.details-purchase-button {
+    -fx-background-color: #66519a;
+    -fx-background-radius: 8px;
+
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 19px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 15px 24px;
+    -fx-cursor: hand;
+}
+
+.details-purchase-button:hover {
+    -fx-background-color: #755dac;
+}
+
+.details-purchase-button:pressed {
+    -fx-background-color: #594487;
+}
+
+.details-purchase-button:disabled {
+    -fx-background-color: #393440;
+    -fx-text-fill: #aaa5b2;
+    -fx-opacity: 1;
+}
+
+.details-message {
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+}
+
+.details-message-success {
+    -fx-text-fill: #78c596;
+}
+
+.details-message-error {
+    -fx-text-fill: #ef8585;
+}
+
+/* =========================================================
+   PURCHASED BOOKS PAGE
+   ========================================================= */
+
+.purchased-root {
+    -fx-background-color: #101117;
+}
+
+.purchased-content {
+    -fx-background-color: #101117;
+}
+
+.purchased-page-title {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 32px;
+    -fx-font-weight: 800;
+}
+
+.purchased-page-subtitle {
+    -fx-text-fill: #c3bfca;
+    -fx-font-size: 17px;
+    -fx-font-weight: 500;
+}
+
+.purchased-message {
+    -fx-text-fill: #c9c4d2;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+}
+
+.purchased-message-success {
+    -fx-text-fill: #78c596;
+}
+
+.purchased-message-error {
+    -fx-text-fill: #ef8585;
+}
+
+.purchased-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.purchased-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.purchased-scroll-pane .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.purchased-scroll-pane .scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.purchased-scroll-pane .scroll-bar .thumb {
+    -fx-background-color: #4d3c68;
+    -fx-background-radius: 8px;
+}
+
+.purchased-book-card {
+    -fx-background-color: #19181f;
+    -fx-background-radius: 9px;
+
+    -fx-border-color: #554071;
+    -fx-border-radius: 9px;
+    -fx-border-width: 1px;
+
+    -fx-padding: 16px 20px;
+}
+
+.purchased-book-card:hover {
+    -fx-background-color: #211e29;
+    -fx-border-color: #8063ad;
+
+    -fx-effect:
+            dropshadow(
+                    gaussian,
+                    rgba(92, 64, 137, 0.24),
+                    12,
+                    0.15,
+                    0,
+                    2
+            );
+}
+
+.purchased-cover-container {
+    -fx-background-color:
+            linear-gradient(
+                    to bottom right,
+                    #342650,
+                    #17131f
+            );
+
+    -fx-background-radius: 5px;
+
+    -fx-border-color: #443852;
+    -fx-border-radius: 5px;
+
+    -fx-alignment: CENTER;
+}
+
+.purchased-cover-placeholder {
+    -fx-text-fill: #efd06d;
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+
+    -fx-text-alignment: CENTER;
+    -fx-alignment: CENTER;
+}
+
+.purchased-card-title {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+}
+
+.purchased-category-badge {
+    -fx-background-color: #30234a;
+    -fx-background-radius: 9px;
+
+    -fx-text-fill: #b99ae7;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 5px 10px;
+}
+
+.purchased-card-price {
+    -fx-text-fill: #e4c765;
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+}
+
+.purchased-card-date {
+    -fx-text-fill: #c3becb;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+}
+
+.purchased-secondary-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 7px;
+
+    -fx-border-color: #675083;
+    -fx-border-radius: 7px;
+    -fx-border-width: 1px;
+
+    -fx-text-fill: #ddd7e8;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+
+    -fx-padding: 10px 15px;
+    -fx-cursor: hand;
+}
+
+.purchased-secondary-button:hover {
+    -fx-background-color: #2a2333;
+    -fx-border-color: #8b6bbb;
+}
+
+.purchased-download-button {
+    -fx-background-color: #66519a;
+    -fx-background-radius: 7px;
+
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 11px 15px;
+    -fx-cursor: hand;
+}
+
+.purchased-download-button:hover {
+    -fx-background-color: #765ead;
+}
+
+/* =========================================================
+   PROFILE PAGE
+   ========================================================= */
+
+.profile-root {
+    -fx-background-color: #101117;
+}
+
+.profile-content {
+    -fx-background-color: #101117;
+}
+
+.profile-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.profile-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.profile-scroll-pane .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.profile-scroll-pane .scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.profile-scroll-pane .scroll-bar .thumb {
+    -fx-background-color: #4d3c68;
+    -fx-background-radius: 8px;
+}
+
+.profile-page-title {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 34px;
+    -fx-font-weight: 800;
+}
+
+.profile-header-card {
+    -fx-background-color: #19181f;
+    -fx-background-radius: 10px;
+
+    -fx-border-color: #554071;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+
+    -fx-padding: 22px 26px;
+}
+
+.profile-avatar {
+    -fx-background-color:
+            linear-gradient(
+                    to bottom right,
+                    #765bac,
+                    #392755
+            );
+
+    -fx-background-radius: 50%;
+
+    -fx-border-color: #9575c8;
+    -fx-border-radius: 50%;
+    -fx-border-width: 2px;
+}
+
+.profile-avatar-initial {
+    -fx-text-fill: white;
+    -fx-font-size: 34px;
+    -fx-font-weight: 800;
+}
+
+.profile-header-name {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 24px;
+    -fx-font-weight: 800;
+}
+
+.profile-header-role {
+    -fx-text-fill: #a98bd5;
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+}
+
+.profile-section-title {
+    -fx-text-fill: #e2c66e;
+    -fx-font-size: 21px;
+    -fx-font-weight: 800;
+}
+
+.profile-information-card {
+    -fx-background-color: #19181f;
+    -fx-background-radius: 10px;
+
+    -fx-border-color: #4e3b69;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+
+    -fx-padding: 25px 28px;
+}
+
+.profile-field-name {
+    -fx-text-fill: #aaa6b3;
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+}
+
+.profile-field-value {
+    -fx-text-fill: #f3f0f7;
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+}
+
+.profile-role-badge {
+    -fx-background-color: #30234a;
+    -fx-background-radius: 9px;
+
+    -fx-text-fill: #bb9be8;
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 6px 14px;
+}
+
+.profile-message {
+    -fx-text-fill: #c7c2cc;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+}
+
+.profile-message-error {
+    -fx-text-fill: #ef8585;
+}
+/* =========================================================
+   WALLET PAGE
+   ========================================================= */
+
+.wallet-root {
+    -fx-background-color: #101117;
+}
+
+.wallet-content {
+    -fx-background-color: #101117;
+}
+
+.wallet-page-title {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 34px;
+    -fx-font-weight: 800;
+}
+
+.wallet-page-subtitle {
+    -fx-text-fill: #c4c0ca;
+    -fx-font-size: 17px;
+    -fx-font-weight: 500;
+}
+
+.wallet-owner-card {
+    -fx-background-color: #19181f;
+    -fx-background-radius: 10px;
+
+    -fx-border-color: #554071;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+
+    -fx-padding: 22px 26px;
+}
+
+.wallet-owner-avatar {
+    -fx-background-color:
+            linear-gradient(
+                    to bottom right,
+                    #765bac,
+                    #382650
+            );
+
+    -fx-background-radius: 50%;
+
+    -fx-border-color: #9575c8;
+    -fx-border-radius: 50%;
+    -fx-border-width: 2px;
+}
+
+.wallet-owner-initial {
+    -fx-text-fill: white;
+    -fx-font-size: 32px;
+    -fx-font-weight: 800;
+}
+
+.wallet-owner-name {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 23px;
+    -fx-font-weight: 800;
+}
+
+.wallet-owner-role {
+    -fx-text-fill: #ae90d8;
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+}
+
+.wallet-balance-card {
+    -fx-background-color: #211e22;
+    -fx-background-radius: 14px;
+
+    -fx-border-color: #a6873c;
+    -fx-border-radius: 14px;
+    -fx-border-width: 1.4px;
+
+    -fx-padding: 48px 40px;
+
+    -fx-effect:
+            dropshadow(
+                    gaussian,
+                    rgba(145, 112, 35, 0.14),
+                    16,
+                    0.15,
+                    0,
+                    3
+            );
+}
+
+.wallet-balance-caption {
+    -fx-text-fill: #dcc473;
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+}
+
+.wallet-balance-value {
+    -fx-text-fill: #f1cf67;
+    -fx-font-size: 50px;
+    -fx-font-weight: 800;
+}
+
+.wallet-description {
+    -fx-text-fill: #d0ccd5;
+    -fx-font-size: 16px;
+    -fx-font-weight: 500;
+
+    -fx-text-alignment: CENTER;
+    -fx-alignment: CENTER;
+}
+
+.wallet-information-card {
+    -fx-background-color: #19181f;
+    -fx-background-radius: 10px;
+
+    -fx-border-color: #4f3c69;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+
+    -fx-padding: 22px 26px;
+}
+
+.wallet-information-title {
+    -fx-text-fill: #e2c66d;
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+}
+
+.wallet-information-text {
+    -fx-text-fill: #c7c3cd;
+    -fx-font-size: 15px;
+    -fx-font-weight: 500;
+
+    -fx-line-spacing: 2px;
+}
+
+.wallet-message {
+    -fx-text-fill: #c7c2cc;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+}
+
+.wallet-message-error {
+    -fx-text-fill: #ef8585;
+}
+
+/* =========================================================
+   WALLET TOP-UP
+   ========================================================= */
+
+.wallet-add-funds-button {
+    -fx-background-color: #66519a;
+    -fx-background-radius: 8px;
+
+    -fx-border-color: #8a6ab5;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+
+    -fx-text-fill: white;
+    -fx-font-size: 17px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 13px 24px;
+    -fx-cursor: hand;
+}
+
+.wallet-add-funds-button:hover {
+    -fx-background-color: #765ead;
+    -fx-border-color: #a382d2;
+
+    -fx-effect:
+            dropshadow(
+                    gaussian,
+                    rgba(100, 74, 150, 0.28),
+                    10,
+                    0.14,
+                    0,
+                    2
+            );
+}
+
+.wallet-add-funds-button:pressed {
+    -fx-background-color: #574183;
+}
+
+.wallet-message-success {
+    -fx-text-fill: #78c596;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+}
+
+.top-up-dialog {
+    -fx-background-color: #17171e;
+}
+
+.top-up-dialog .header-panel {
+    -fx-background-color: #211d29;
+}
+
+.top-up-dialog .header-panel .label {
+    -fx-text-fill: #f6f3fa;
+    -fx-font-size: 18px;
+    -fx-font-weight: 800;
+}
+
+.top-up-dialog .content {
+    -fx-text-fill: #d0ccd6;
+    -fx-font-size: 15px;
+}
+
+.top-up-dialog .combo-box {
+    -fx-background-color: #1a1921;
+    -fx-border-color: #654c89;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+
+.top-up-dialog .combo-box .list-cell {
+    -fx-background-color: #1a1921;
+    -fx-text-fill: #f8f6fb;
+}
+
+.top-up-dialog .button {
+    -fx-background-color: #66519a;
+    -fx-background-radius: 6px;
+
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+
+    -fx-padding: 8px 18px;
+}
+
+.top-up-dialog .button:hover {
+    -fx-background-color: #765ead;
+}
+
+/* =========================================================
+   MY BOOKS PAGE
+   ========================================================= */
+
+.my-books-root {
+    -fx-background-color: #101117;
+}
+
+.my-books-content {
+    -fx-background-color: #101117;
+}
+
+.my-books-page-title {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 34px;
+    -fx-font-weight: 800;
+}
+
+.my-books-page-subtitle {
+    -fx-text-fill: #c4c0ca;
+    -fx-font-size: 17px;
+    -fx-font-weight: 500;
+}
+
+.my-books-upload-button {
+    -fx-background-color: #66519a;
+    -fx-background-radius: 8px;
+
+    -fx-border-color: #8567b2;
+    -fx-border-radius: 8px;
+
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 12px 20px;
+    -fx-cursor: hand;
+}
+
+.my-books-upload-button:hover {
+    -fx-background-color: #765ead;
+}
+
+.my-books-message {
+    -fx-text-fill: #c8c3ce;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+}
+
+.my-books-message-success {
+    -fx-text-fill: #78c596;
+}
+
+.my-books-message-error {
+    -fx-text-fill: #ef8585;
+}
+
+.my-books-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.my-books-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.my-books-scroll-pane .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.my-books-scroll-pane .scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.my-books-scroll-pane .scroll-bar .thumb {
+    -fx-background-color: #4d3c68;
+    -fx-background-radius: 8px;
+}
+
+.my-books-card {
+    -fx-background-color: #19181f;
+    -fx-background-radius: 10px;
+
+    -fx-border-color: #554071;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+
+    -fx-padding: 17px 20px;
+}
+
+.my-books-card:hover {
+    -fx-background-color: #211e29;
+    -fx-border-color: #8063ad;
+
+    -fx-effect:
+            dropshadow(
+                    gaussian,
+                    rgba(92, 64, 137, 0.24),
+                    12,
+                    0.15,
+                    0,
+                    2
+            );
+}
+
+.my-books-cover-container {
+    -fx-background-color:
+            linear-gradient(
+                    to bottom right,
+                    #342650,
+                    #17131f
+            );
+
+    -fx-background-radius: 6px;
+
+    -fx-border-color: #443852;
+    -fx-border-radius: 6px;
+
+    -fx-alignment: CENTER;
+}
+
+.my-books-cover-placeholder {
+    -fx-text-fill: #efd06d;
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+
+    -fx-text-alignment: CENTER;
+    -fx-alignment: CENTER;
+}
+
+.my-books-card-title {
+    -fx-text-fill: #faf9ff;
+    -fx-font-size: 21px;
+    -fx-font-weight: 800;
+}
+
+.my-books-category-badge {
+    -fx-background-color: #30234a;
+    -fx-background-radius: 9px;
+
+    -fx-text-fill: #b99ae7;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 5px 10px;
+}
+
+.my-books-card-detail {
+    -fx-text-fill: #c4bfca;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+}
+
+.my-books-card-price {
+    -fx-text-fill: #e4c765;
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+}
+
+.my-books-status-badge {
+    -fx-background-radius: 9px;
+
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 5px 10px;
+}
+
+.my-books-status-available {
+    -fx-background-color: #1c3328;
+    -fx-text-fill: #78c596;
+}
+
+.my-books-status-removed {
+    -fx-background-color: #3a2529;
+    -fx-text-fill: #e58a91;
+}
+
+.my-books-remove-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 7px;
+
+    -fx-border-color: #a8515d;
+    -fx-border-radius: 7px;
+    -fx-border-width: 1.2px;
+
+    -fx-text-fill: #ed959c;
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 11px 14px;
+    -fx-cursor: hand;
+}
+
+.my-books-remove-button:hover {
+    -fx-background-color: rgba(168, 81, 93, 0.18);
+    -fx-border-color: #d66e79;
+}
+
+.my-books-removed-button {
+    -fx-background-color: #35313a;
+    -fx-background-radius: 7px;
+
+    -fx-text-fill: #aaa5af;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+
+    -fx-padding: 11px 14px;
+    -fx-opacity: 1;
+}
+
+.remove-book-dialog {
+    -fx-background-color: #17171e;
+}
+
+.remove-book-dialog .header-panel {
+    -fx-background-color: #251c23;
+}
+
+.remove-book-dialog .header-panel .label {
+    -fx-text-fill: #faf4f5;
+    -fx-font-size: 17px;
+    -fx-font-weight: 800;
+}
+
+.remove-book-dialog .content {
+    -fx-text-fill: #d0cbd2;
+    -fx-font-size: 14px;
+}
+
+.remove-book-dialog .button {
+    -fx-background-color: #66519a;
+    -fx-background-radius: 6px;
+
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+
+    -fx-padding: 8px 18px;
+}
+
+.remove-book-dialog .button:hover {
+    -fx-background-color: #765ead;
+}
+
+/* =========================================================
+   UPLOAD PAGE - SOFTER AND MORE READABLE THEME
+   ========================================================= */
+
+.upload-root {
+    -fx-background-color: #12131a;
+}
+
+.upload-header {
+    -fx-background-color: #111219;
+    -fx-border-color: #35313e;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.upload-header-title {
+    -fx-text-fill: #e9e5ee;
+    -fx-font-size: 28px;
+    -fx-font-weight: 800;
+}
+
+.upload-header-user {
+    -fx-text-fill: #ddd8e4;
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+}
+
+.upload-header-role {
+    -fx-text-fill: #ae91d5;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+}
+
+.upload-back-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-text-fill: #ded9e5;
+    -fx-font-size: 31px;
+    -fx-font-weight: 700;
+
+    -fx-padding: 2px 8px;
+    -fx-cursor: hand;
+}
+
+.upload-back-button:hover {
+    -fx-text-fill: #a887d4;
+}
+
+.upload-content {
+    -fx-background-color: #12131a;
+}
+
+.upload-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.upload-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.upload-scroll-pane .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.upload-scroll-pane .scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.upload-scroll-pane .scroll-bar .thumb {
+    -fx-background-color: #4a3b61;
+    -fx-background-radius: 8px;
+}
+
+.upload-field-label {
+    -fx-text-fill: #dcd7e3;
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+}
+
+.upload-file-card {
+    -fx-background-color: #1c1b23;
+    -fx-background-radius: 9px;
+
+    -fx-border-color: #4e3d65;
+    -fx-border-radius: 9px;
+    -fx-border-width: 1px;
+
+    -fx-padding: 13px 16px;
+}
+
+.upload-file-card:hover {
+    -fx-background-color: #22202a;
+    -fx-border-color: #75599c;
+}
+
+.upload-file-icon {
+    -fx-text-fill: #8c6abb;
+    -fx-font-size: 34px;
+    -fx-font-weight: 400;
+}
+
+.upload-file-title {
+    -fx-text-fill: #e4dfea;
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+}
+
+.upload-file-description {
+    -fx-text-fill: #a8a2af;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+}
+
+.upload-file-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 7px;
+
+    -fx-border-color: #685087;
+    -fx-border-radius: 7px;
+    -fx-border-width: 1px;
+
+    -fx-text-fill: #d5cbe0;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+
+    -fx-padding: 7px 15px;
+    -fx-cursor: hand;
+}
+
+.upload-file-button:hover {
+    -fx-background-color: #2b2435;
+    -fx-border-color: #9171bb;
+}
+
+.upload-selected-file {
+    -fx-text-fill: #c9c3cf;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+
+    -fx-text-alignment: CENTER;
+    -fx-alignment: CENTER;
+}
+
+/* TEXT FIELD */
+
+.upload-field {
+    -fx-background-color: #1d1c24;
+    -fx-background-radius: 8px;
+
+    -fx-border-color: #4b3b61;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+
+    -fx-text-fill: #e5e1e9;
+    -fx-prompt-text-fill: #958f9e;
+
+    -fx-font-size: 17px;
+    -fx-font-weight: 500;
+
+    -fx-padding: 15px 17px;
+}
+
+.upload-field:focused {
+    -fx-border-color: #75599e;
+    -fx-border-width: 1.4px;
+}
+
+/* COMBO BOX */
+
+.upload-combo-box {
+    -fx-background-color: #1d1c24;
+    -fx-background-radius: 8px;
+
+    -fx-border-color: #4b3b61;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+
+    -fx-font-size: 17px;
+    -fx-font-weight: 500;
+
+    -fx-padding: 2px 0;
+}
+
+.upload-combo-box:focused {
+    -fx-border-color: #75599e;
+    -fx-border-width: 1.4px;
+}
+
+.upload-combo-box .list-cell {
+    -fx-background-color: #1d1c24;
+
+    -fx-text-fill: #ddd8e3;
+    -fx-font-size: 16px;
+    -fx-font-weight: 500;
+
+    -fx-padding: 10px 14px;
+}
+
+.upload-combo-box .arrow-button {
+    -fx-background-color: #292630;
+    -fx-background-radius: 0 8px 8px 0;
+    -fx-padding: 0 14px;
+}
+
+.upload-combo-box .arrow-button:hover {
+    -fx-background-color: #342d3e;
+}
+
+.upload-combo-box .arrow {
+    -fx-background-color: #c5bfce;
+}
+
+/* COMBO BOX POPUP */
+
+.combo-box-popup .list-view {
+    -fx-background-color: #191820;
+    -fx-border-color: #493a5e;
+    -fx-border-width: 1px;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: #191820;
+
+    -fx-text-fill: #d8d3de;
+    -fx-font-size: 16px;
+    -fx-font-weight: 500;
+
+    -fx-padding: 11px 15px;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #292331;
+    -fx-text-fill: #ebe7ef;
+}
+
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: #5b4786;
+    -fx-text-fill: #f0edf3;
+}
+
+/* TEXT AREA */
+
+.upload-text-area {
+    -fx-background-color: #1d1c24;
+    -fx-background-radius: 8px;
+
+    -fx-border-color: #4b3b61;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+
+    -fx-text-fill: #e5e1e9;
+    -fx-prompt-text-fill: #958f9e;
+
+    -fx-font-size: 17px;
+    -fx-font-weight: 500;
+
+    -fx-pref-height: 160px;
+    -fx-min-height: 145px;
+    -fx-max-height: 175px;
+}
+
+.upload-text-area:focused {
+    -fx-border-color: #75599e;
+    -fx-border-width: 1.4px;
+}
+
+.upload-text-area .content {
+    -fx-background-color: #1d1c24;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px;
+}
+
+/* MESSAGE */
+
+.upload-message {
+    -fx-text-fill: #c3bdc9;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+}
+
+.upload-message-success {
+    -fx-text-fill: #7ebd95;
+}
+
+.upload-message-error {
+    -fx-text-fill: #df8888;
+}
+
+/* BUTTONS */
+
+.upload-cancel-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 7px;
+
+    -fx-border-color: #514066;
+    -fx-border-radius: 7px;
+    -fx-border-width: 1px;
+
+    -fx-text-fill: #ddd8e4;
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+
+    -fx-padding: 13px 22px;
+    -fx-min-height: 48px;
+    -fx-cursor: hand;
+}
+
+.upload-cancel-button:hover {
+    -fx-background-color: #28232f;
+    -fx-border-color: #74599a;
+}
+
+.upload-publish-button {
+    -fx-background-color: #62508f;
+    -fx-background-radius: 7px;
+
+    -fx-border-color: #7862a4;
+    -fx-border-radius: 7px;
+    -fx-border-width: 1px;
+
+    -fx-text-fill: #f0edf4;
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+
+    -fx-padding: 14px 24px;
+    -fx-min-height: 48px;
+    -fx-cursor: hand;
+}
+
+.upload-publish-button:hover {
+    -fx-background-color: #6e5aa0;
+}
+
+.upload-publish-button:pressed {
+    -fx-background-color: #56437e;
+}
+/* =========================================================
+   UPLOAD PAGE - FIXED ACTION BAR AND COMPACT LAYOUT
+   ========================================================= */
+
+.upload-action-bar {
+    -fx-background-color: #111219;
+    -fx-border-color: #35313e;
+    -fx-border-width: 1px 0 0 0;
+
+    -fx-effect:
+            dropshadow(
+                    gaussian,
+                    rgba(0, 0, 0, 0.35),
+                    12,
+                    0.12,
+                    0,
+                    -2
+            );
+}
+
+.upload-scroll-pane .scroll-bar:vertical {
+    -fx-pref-width: 13px;
+    -fx-padding: 3px;
+}
+
+.upload-scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #665083;
+    -fx-background-radius: 8px;
+}
+
+.upload-scroll-pane .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #7b609f;
+}
+
+.upload-scroll-pane .scroll-bar:vertical .track {
+    -fx-background-color: #181820;
+    -fx-background-radius: 8px;
+}
+
+.upload-scroll-pane .scroll-bar .increment-button,
+.upload-scroll-pane .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 3px;
+}
+
+.upload-scroll-pane .scroll-bar .increment-arrow,
+.upload-scroll-pane .scroll-bar .decrement-arrow {
+    -fx-background-color: #8e849b;
+}
+
+
+.sidebar-logo-text {
+    -fx-text-fill: #f2d36b;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Georgia";
+}
+
+/* =========================================================
+   REGISTRATION - BIRTH DATE COMBO BOXES
+   ========================================================= */
+
+.birth-date-combo {
+    -fx-background-color: #1d1c24;
+    -fx-background-radius: 8px;
+
+    -fx-border-color: #4b3b61;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+
+    -fx-font-size: 16px;
+    -fx-font-weight: 500;
+
+    -fx-padding: 2px 0;
+}
+
+.birth-date-combo:focused {
+    -fx-border-color: #75599e;
+    -fx-border-width: 1.4px;
+}
+
+.birth-date-combo .list-cell {
+    -fx-background-color: #1d1c24;
+    -fx-text-fill: #ddd8e3;
+
+    -fx-font-size: 15px;
+    -fx-font-weight: 500;
+
+    -fx-padding: 9px 12px;
+}
+
+.birth-date-combo .arrow-button {
+    -fx-background-color: #292630;
+    -fx-background-radius: 0 8px 8px 0;
+}
+
+.birth-date-combo .arrow {
+    -fx-background-color: #c5bfce;
+}
+
+.birth-date-combo:hover {
+    -fx-border-color: #695184;
+}

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="it.bookverse.boundary.ProfileBoundary"
+            styleClass="profile-root"
+            prefWidth="1200"
+            prefHeight="780">
+
+    <left>
+        <VBox styleClass="sidebar"
+              prefWidth="275"
+              minWidth="250"
+              spacing="8">
+
+            <padding>
+                <Insets top="28"
+                        right="16"
+                        bottom="28"
+                        left="16"/>
+            </padding>
+
+            <Label text="BookVerse"
+                   styleClass="sidebar-logo-text"/>
+
+            <Region prefHeight="24"/>
+
+            <Button text="Library"
+                    styleClass="sidebar-button"
+                    onAction="#handleBackToLibrary"
+                    maxWidth="Infinity"/>
+
+            <Button text="My Profile"
+                    styleClass="sidebar-button, sidebar-button-active"
+                    maxWidth="Infinity"/>
+
+            <Button fx:id="myLibraryButton"
+                    text="My Library"
+                    styleClass="sidebar-button"
+                    onAction="#handleOpenPurchasedBooks"
+                    maxWidth="Infinity"/>
+
+            <Button fx:id="myBooksButton"
+                    text="My Books"
+                    styleClass="sidebar-button"
+                    onAction="#handleOpenMyBooks"
+                    maxWidth="Infinity"/>
+
+            <Button fx:id="uploadBookButton"
+                    text="Upload Book"
+                    styleClass="sidebar-button"
+                    onAction="#handleOpenUploadBook"
+                    maxWidth="Infinity"/>
+
+            <Button text="View Wallet"
+                    styleClass="sidebar-button"
+                    onAction="#handleOpenWallet"
+                    maxWidth="Infinity"/>
+
+            <Button text="Log out"
+                    styleClass="sidebar-button"
+                    onAction="#handleLogout"
+                    maxWidth="Infinity"/>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <VBox spacing="12"
+                  styleClass="sidebar-wallet-card">
+
+                <Label text="Wallet"
+                       styleClass="sidebar-wallet-title"/>
+
+                <Label fx:id="walletBalanceLabel"
+                       text="€ 0.00"
+                       styleClass="sidebar-wallet-balance"/>
+            </VBox>
+        </VBox>
+    </left>
+
+    <center>
+        <ScrollPane fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    styleClass="profile-scroll-pane">
+
+            <VBox spacing="25"
+                  styleClass="profile-content">
+
+                <padding>
+                    <Insets top="34"
+                            right="55"
+                            bottom="45"
+                            left="55"/>
+                </padding>
+
+                <Label text="My Profile"
+                       styleClass="profile-page-title"/>
+
+                <HBox alignment="CENTER_LEFT"
+                      spacing="20"
+                      styleClass="profile-header-card">
+
+                    <StackPane styleClass="profile-avatar"
+                               prefWidth="86"
+                               prefHeight="86"
+                               minWidth="86"
+                               minHeight="86"
+                               maxWidth="86"
+                               maxHeight="86">
+
+                        <Label fx:id="profileInitialLabel"
+                               text="B"
+                               styleClass="profile-avatar-initial"/>
+                    </StackPane>
+
+                    <VBox spacing="5">
+
+                        <Label fx:id="profileNameHeaderLabel"
+                               text="BookVerse User"
+                               styleClass="profile-header-name"/>
+
+                        <Label fx:id="profileRoleHeaderLabel"
+                               text="User"
+                               styleClass="profile-header-role"/>
+                    </VBox>
+                </HBox>
+
+                <VBox spacing="15">
+
+                    <Label text="Account Information"
+                           styleClass="profile-section-title"/>
+
+                    <GridPane hgap="28"
+                              vgap="20"
+                              styleClass="profile-information-card">
+
+                        <columnConstraints>
+                            <ColumnConstraints minWidth="170"
+                                               prefWidth="200"/>
+
+                            <ColumnConstraints minWidth="330"
+                                               prefWidth="500"/>
+                        </columnConstraints>
+
+                        <Label text="Full name"
+                               styleClass="profile-field-name"
+                               GridPane.rowIndex="0"
+                               GridPane.columnIndex="0"/>
+
+                        <Label fx:id="fullNameLabel"
+                               wrapText="true"
+                               styleClass="profile-field-value"
+                               GridPane.rowIndex="0"
+                               GridPane.columnIndex="1"/>
+
+                        <Label text="Email address"
+                               styleClass="profile-field-name"
+                               GridPane.rowIndex="1"
+                               GridPane.columnIndex="0"/>
+
+                        <Label fx:id="emailLabel"
+                               wrapText="true"
+                               styleClass="profile-field-value"
+                               GridPane.rowIndex="1"
+                               GridPane.columnIndex="1"/>
+
+                        <Label text="Role"
+                               styleClass="profile-field-name"
+                               GridPane.rowIndex="2"
+                               GridPane.columnIndex="0"/>
+
+                        <Label fx:id="roleLabel"
+                               styleClass="profile-role-badge"
+                               GridPane.rowIndex="2"
+                               GridPane.columnIndex="1"/>
+                    </GridPane>
+                </VBox>
+
+                <VBox spacing="15">
+
+                    <Label text="Additional Information"
+                           styleClass="profile-section-title"/>
+
+                    <GridPane fx:id="readerInformationPane"
+                              hgap="28"
+                              vgap="20"
+                              styleClass="profile-information-card">
+
+                        <columnConstraints>
+                            <ColumnConstraints minWidth="170"
+                                               prefWidth="200"/>
+
+                            <ColumnConstraints minWidth="330"
+                                               prefWidth="500"/>
+                        </columnConstraints>
+
+                        <Label text="Date of birth"
+                               styleClass="profile-field-name"
+                               GridPane.rowIndex="0"
+                               GridPane.columnIndex="0"/>
+
+                        <Label fx:id="birthDateLabel"
+                               styleClass="profile-field-value"
+                               GridPane.rowIndex="0"
+                               GridPane.columnIndex="1"/>
+
+                        <Label text="Account type"
+                               styleClass="profile-field-name"
+                               GridPane.rowIndex="1"
+                               GridPane.columnIndex="0"/>
+
+                        <Label fx:id="accountTypeLabel"
+                               styleClass="profile-field-value"
+                               GridPane.rowIndex="1"
+                               GridPane.columnIndex="1"/>
+                    </GridPane>
+
+                    <GridPane fx:id="writerInformationPane"
+                              hgap="28"
+                              vgap="20"
+                              styleClass="profile-information-card">
+
+                        <columnConstraints>
+                            <ColumnConstraints minWidth="170"
+                                               prefWidth="200"/>
+
+                            <ColumnConstraints minWidth="330"
+                                               prefWidth="500"/>
+                        </columnConstraints>
+
+                        <Label text="Pen name"
+                               styleClass="profile-field-name"
+                               GridPane.rowIndex="0"
+                               GridPane.columnIndex="0"/>
+
+                        <Label fx:id="penNameLabel"
+                               wrapText="true"
+                               styleClass="profile-field-value"
+                               GridPane.rowIndex="0"
+                               GridPane.columnIndex="1"/>
+
+                        <Label text="Biography"
+                               styleClass="profile-field-name"
+                               GridPane.rowIndex="1"
+                               GridPane.columnIndex="0"/>
+
+                        <Label fx:id="biographyLabel"
+                               wrapText="true"
+                               maxWidth="500"
+                               styleClass="profile-field-value"
+                               GridPane.rowIndex="1"
+                               GridPane.columnIndex="1"/>
+
+                        <Label text="Website / Social"
+                               styleClass="profile-field-name"
+                               GridPane.rowIndex="2"
+                               GridPane.columnIndex="0"/>
+
+                        <Label fx:id="websiteLabel"
+                               wrapText="true"
+                               styleClass="profile-field-value"
+                               GridPane.rowIndex="2"
+                               GridPane.columnIndex="1"/>
+                    </GridPane>
+                </VBox>
+
+                <Label fx:id="messageLabel"
+                       wrapText="true"
+                       styleClass="profile-message"/>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

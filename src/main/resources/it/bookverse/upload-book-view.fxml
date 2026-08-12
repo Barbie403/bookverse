@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="it.bookverse.boundary.UploadBookBoundary"
+            styleClass="upload-root"
+            prefWidth="1200"
+            prefHeight="780">
+
+    <!-- HEADER -->
+    <top>
+        <HBox alignment="CENTER_LEFT"
+              spacing="14"
+              styleClass="upload-header">
+
+            <padding>
+                <Insets top="18"
+                        right="32"
+                        bottom="18"
+                        left="32"/>
+            </padding>
+
+            <Button text="←"
+                    onAction="#handleBackToLibrary"
+                    styleClass="upload-back-button"/>
+
+            <Label text="Upload New Book"
+                   styleClass="upload-header-title"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <VBox alignment="CENTER_RIGHT"
+                  spacing="2">
+
+                <Label text="Writer Workspace"
+                       styleClass="upload-header-user"/>
+
+                <Label text="BookVerse"
+                       styleClass="upload-header-role"/>
+            </VBox>
+        </HBox>
+    </top>
+
+    <!-- SCROLLABLE CONTENT -->
+    <center>
+        <ScrollPane fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    vbarPolicy="AS_NEEDED"
+                    styleClass="upload-scroll-pane">
+
+            <VBox spacing="20"
+                  styleClass="upload-content">
+
+                <padding>
+                    <Insets top="24"
+                            right="48"
+                            bottom="24"
+                            left="48"/>
+                </padding>
+
+                <GridPane hgap="42"
+                          vgap="18">
+
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="230"
+                                           prefWidth="260"/>
+
+                        <ColumnConstraints minWidth="500"
+                                           prefWidth="720"
+                                           hgrow="ALWAYS"/>
+                    </columnConstraints>
+
+                    <!-- LEFT SIDE -->
+                    <VBox spacing="12"
+                          GridPane.columnIndex="0"
+                          GridPane.rowIndex="0">
+
+                        <Label text="Book Cover Image"
+                               styleClass="upload-field-label"/>
+
+                        <VBox alignment="CENTER"
+                              spacing="9"
+                              styleClass="upload-file-card"
+                              prefHeight="170"
+                              minHeight="170"
+                              maxHeight="170">
+
+                            <Label text="↑"
+                                   styleClass="upload-file-icon"/>
+
+                            <Label text="Upload Cover"
+                                   styleClass="upload-file-title"/>
+
+                            <Label text="JPG, PNG or JPEG"
+                                   styleClass="upload-file-description"/>
+
+                            <Button text="Choose Cover"
+                                    onAction="#handleChooseCover"
+                                    styleClass="upload-file-button"/>
+
+                            <Label fx:id="coverFileLabel"
+                                   text="No cover selected"
+                                   wrapText="true"
+                                   maxWidth="205"
+                                   styleClass="upload-selected-file"/>
+                        </VBox>
+
+                        <Region prefHeight="8"/>
+
+                        <Label text="Book File"
+                               styleClass="upload-field-label"/>
+
+                        <VBox alignment="CENTER"
+                              spacing="9"
+                              styleClass="upload-file-card"
+                              prefHeight="170"
+                              minHeight="170"
+                              maxHeight="170">
+
+                            <Label text="↑"
+                                   styleClass="upload-file-icon"/>
+
+                            <Label text="Upload PDF"
+                                   styleClass="upload-file-title"/>
+
+                            <Label text="PDF document"
+                                   styleClass="upload-file-description"/>
+
+                            <Button text="Choose PDF"
+                                    onAction="#handleChoosePdf"
+                                    styleClass="upload-file-button"/>
+
+                            <Label fx:id="pdfFileLabel"
+                                   text="No PDF selected"
+                                   wrapText="true"
+                                   maxWidth="205"
+                                   styleClass="upload-selected-file"/>
+                        </VBox>
+                    </VBox>
+
+                    <!-- RIGHT SIDE -->
+                    <VBox spacing="12"
+                          GridPane.columnIndex="1"
+                          GridPane.rowIndex="0">
+
+                        <Label text="Book Title"
+                               styleClass="upload-field-label"/>
+
+                        <TextField fx:id="titleField"
+                                   promptText="Enter book title"
+                                   styleClass="upload-field"
+                                   maxWidth="Infinity"/>
+
+                        <Label text="Category"
+                               styleClass="upload-field-label"/>
+
+                        <ComboBox fx:id="categoryComboBox"
+                                  promptText="Select category"
+                                  styleClass="upload-combo-box"
+                                  maxWidth="Infinity"/>
+
+                        <HBox spacing="22">
+
+                            <VBox spacing="8"
+                                  HBox.hgrow="ALWAYS">
+
+                                <Label text="Audience"
+                                       styleClass="upload-field-label"/>
+
+                                <ComboBox fx:id="audienceComboBox"
+                                          promptText="Select audience"
+                                          styleClass="upload-combo-box"
+                                          maxWidth="Infinity"/>
+                            </VBox>
+
+                            <VBox spacing="8"
+                                  HBox.hgrow="ALWAYS">
+
+                                <Label text="Price (€)"
+                                       styleClass="upload-field-label"/>
+
+                                <TextField fx:id="priceField"
+                                           promptText="Example: 12.99"
+                                           styleClass="upload-field"
+                                           maxWidth="Infinity"/>
+                            </VBox>
+                        </HBox>
+
+                        <Label text="Description"
+                               styleClass="upload-field-label"/>
+
+                        <TextArea fx:id="descriptionArea"
+                                  promptText="Write a short summary about your book..."
+                                  prefRowCount="5"
+                                  prefHeight="160"
+                                  wrapText="true"
+                                  styleClass="upload-text-area"
+                                  maxWidth="Infinity"/>
+
+                        <Label fx:id="messageLabel"
+                               wrapText="true"
+                               maxWidth="760"
+                               styleClass="upload-message"/>
+                    </VBox>
+                </GridPane>
+            </VBox>
+        </ScrollPane>
+    </center>
+
+    <!-- FIXED ACTION BAR -->
+    <bottom>
+        <HBox alignment="CENTER_RIGHT"
+              spacing="18"
+              styleClass="upload-action-bar">
+
+            <padding>
+                <Insets top="14"
+                        right="48"
+                        bottom="14"
+                        left="48"/>
+            </padding>
+
+            <Button text="Cancel"
+                    onAction="#handleCancel"
+                    styleClass="upload-cancel-button"
+                    prefWidth="180"/>
+
+            <Button text="Publish Book"
+                    onAction="#handleUpload"
+                    styleClass="upload-publish-button"
+                    prefWidth="240"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="it.bookverse.boundary.LoginBoundary"
+      styleClass="auth-root"
+      prefWidth="1200"
+      prefHeight="780">
+
+    <fx:define>
+        <ToggleGroup fx:id="persistenceToggleGroup"/>
+    </fx:define>
+
+    <StackPane styleClass="auth-image-pane"
+               prefWidth="470"
+               minWidth="420">
+
+        <ImageView preserveRatio="false"
+                   fitWidth="470"
+                   fitHeight="780">
+
+            <image>
+                <Image url="@images/login-background.jpg"/>
+            </image>
+        </ImageView>
+
+    </StackPane>
+
+    <VBox alignment="CENTER"
+          styleClass="auth-form-pane"
+          HBox.hgrow="ALWAYS">
+
+        <VBox alignment="CENTER"
+              spacing="18"
+              maxWidth="500">
+
+            <padding>
+                <Insets top="35"
+                        right="40"
+                        bottom="35"
+                        left="40"/>
+            </padding>
+
+            <Label text="BookVerse"
+                   styleClass="sidebar-logo-text"/>
+
+            <VBox alignment="CENTER"
+                  spacing="5">
+
+                <Label text="Welcome back"
+                       styleClass="page-title"/>
+
+                <Label text="Login to continue your journey"
+                       styleClass="page-subtitle"/>
+            </VBox>
+
+            <Region prefHeight="8"/>
+
+            <TextField fx:id="emailField"
+                       promptText="Email address"
+                       styleClass="auth-field"
+                       maxWidth="Infinity"/>
+
+            <PasswordField fx:id="passwordField"
+                           promptText="Password"
+                           styleClass="auth-field"
+                           maxWidth="Infinity"/>
+
+            <Button text="Login"
+                    onAction="#handleLogin"
+                    styleClass="primary-button"
+                    maxWidth="Infinity"/>
+
+            <HBox alignment="CENTER"
+                  spacing="3">
+
+                <Label text="Don't have an account?"
+                       styleClass="secondary-text"/>
+
+                <Hyperlink text="Register"
+                           onAction="#handleOpenRegistration"
+                           styleClass="auth-link"/>
+            </HBox>
+
+            <Separator/>
+
+            <VBox alignment="CENTER"
+                  spacing="5">
+
+                <Label text="Persistence Mode"
+                       styleClass="persistence-title"/>
+
+                <Label text="Choose how you want to use BookVerse"
+                       styleClass="page-subtitle"/>
+            </VBox>
+
+            <HBox spacing="18"
+                  maxWidth="Infinity">
+
+                <VBox fx:id="demoModeCard"
+                      spacing="8"
+                      styleClass="persistence-card"
+                      onMouseClicked="#handleSelectDemoMode"
+                      HBox.hgrow="ALWAYS">
+
+                    <HBox alignment="CENTER_LEFT">
+
+                        <Label text="Demo"
+                               styleClass="persistence-card-title"/>
+
+                        <Region HBox.hgrow="ALWAYS"/>
+
+                        <RadioButton fx:id="demoModeRadioButton"
+                                     toggleGroup="$persistenceToggleGroup"
+                                     selected="true"/>
+                    </HBox>
+
+                    <Label text="In-Memory Management"
+                           styleClass="secondary-text"/>
+
+                    <Label text="Fast and temporary"
+                           styleClass="persistence-card-description"/>
+                </VBox>
+
+                <VBox fx:id="fileModeCard"
+                      spacing="8"
+                      styleClass="persistence-card"
+                      onMouseClicked="#handleSelectFileMode"
+                      HBox.hgrow="ALWAYS">
+
+                    <HBox alignment="CENTER_LEFT">
+
+                        <Label text="File"
+                               styleClass="persistence-card-title"/>
+
+                        <Region HBox.hgrow="ALWAYS"/>
+
+                        <RadioButton fx:id="fileModeRadioButton"
+                                     toggleGroup="$persistenceToggleGroup"/>
+                    </HBox>
+
+                    <Label text="Text File Management"
+                           styleClass="secondary-text"/>
+
+                    <Label text="Data remain stored locally"
+                           wrapText="true"
+                           styleClass="persistence-card-description"/>
+                </VBox>
+            </HBox>
+
+            <Label fx:id="messageLabel"
+                   wrapText="true"
+                   styleClass="error-label"/>
+        </VBox>
+    </VBox>
+</HBox>

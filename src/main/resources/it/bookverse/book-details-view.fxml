@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="it.bookverse.boundary.BookDetailsBoundary"
+            styleClass="book-details-root"
+            prefWidth="1200"
+            prefHeight="780">
+
+    <top>
+        <HBox alignment="CENTER_LEFT"
+              spacing="20"
+              styleClass="book-details-header">
+
+            <padding>
+                <Insets top="22"
+                        right="35"
+                        bottom="22"
+                        left="35"/>
+            </padding>
+
+            <Button text="←"
+                    onAction="#handleBackToLibrary"
+                    styleClass="book-details-back-button"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Label text="Book Details"
+                   styleClass="book-details-header-title"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Region prefWidth="58"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    styleClass="book-details-scroll-pane">
+
+            <VBox spacing="28"
+                  styleClass="book-details-content">
+
+                <padding>
+                    <Insets top="30"
+                            right="70"
+                            bottom="45"
+                            left="70"/>
+                </padding>
+
+                <HBox spacing="48"
+                      alignment="TOP_LEFT">
+
+                    <StackPane fx:id="coverContainer"
+                               styleClass="details-cover-container"
+                               prefWidth="310"
+                               prefHeight="430"
+                               minWidth="310"
+                               minHeight="430"
+                               maxWidth="310"
+                               maxHeight="430">
+
+                        <ImageView fx:id="coverImageView"
+                                   fitWidth="310"
+                                   fitHeight="430"
+                                   preserveRatio="false"
+                                   smooth="true"/>
+
+                        <Label fx:id="coverPlaceholderLabel"
+                               text="BOOKVERSE"
+                               wrapText="true"
+                               maxWidth="240"
+                               styleClass="details-cover-placeholder"/>
+                    </StackPane>
+
+                    <VBox spacing="20"
+                          HBox.hgrow="ALWAYS">
+
+                        <Label fx:id="titleLabel"
+                               wrapText="true"
+                               maxWidth="650"
+                               styleClass="details-book-title"/>
+
+                        <Label fx:id="writerLabel"
+                               styleClass="details-writer-name"/>
+
+                        <HBox spacing="14">
+
+                            <Label fx:id="categoryLabel"
+                                   styleClass="details-category-badge"/>
+
+                            <Label fx:id="audienceLabel"
+                                   styleClass="details-audience-badge"/>
+
+                            <Label fx:id="availabilityLabel"
+                                   styleClass="details-availability-badge"/>
+                        </HBox>
+
+                        <VBox spacing="8"
+                              styleClass="details-price-card">
+
+                            <Label text="Price"
+                                   styleClass="details-price-caption"/>
+
+                            <Label fx:id="priceLabel"
+                                   styleClass="details-price-value"/>
+                        </VBox>
+
+                        <Region prefHeight="4"/>
+
+                        <Label text="Summary"
+                               styleClass="details-section-title"/>
+
+                        <Label fx:id="descriptionLabel"
+                               wrapText="true"
+                               maxWidth="650"
+                               styleClass="details-description"/>
+
+                        <Region prefHeight="8"/>
+
+                        <Button fx:id="purchaseButton"
+                                text="Purchase Book"
+                                onAction="#handlePurchase"
+                                styleClass="details-purchase-button"
+                                maxWidth="Infinity"/>
+
+                        <Label fx:id="messageLabel"
+                               wrapText="true"
+                               styleClass="details-message"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>
